@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #article1 {                    /* page.1 */
+            display: block;            /* 表示 */
+        }
+
+        #article2 {                    /* page.2 */
+            display: none;             /* 非表示 */
+        }
+
+    </style>
+    <script>
+        function showArticle2() {
+            // 要素の取得(id名を指定する)
+            const item = document.getElementById("article1")
+
+            // 要素のスタイルの中の項目を設定する。要素名.style.CSS項目名
+            item.style.display = "none"
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        this is header.
+    </header>
+    <nav>
+        this is nav.
+    </nav>
+    <main>
+        <!-- page.1 最初から表示状態 -->
+        <article id="article1">
+            <h2>this is main-article1.</h2>
+            <ul>
+                <li id="sen1">文章１</li>
+                <li id="sen2">文章２</li>
+                <li id="sen3">文章３</li>
+            </ul>
+
+            <button onclick="showArticle2()">Article2 を表示する</button>
+        </article>
+
+        <!-- page.2 最初は非表示状態 -->
+        <article id="article2">
+            <h2 id="artcile-title">this is main-article2.</h2>
+
+            <button onclick="showArticle1()">Articlle1を表示する</button>
+        </article>
+    </main>
+    <footer>
+        this is footer.
+    </footer>
+</body>
+
+</html>
